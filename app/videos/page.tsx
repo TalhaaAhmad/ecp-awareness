@@ -1,0 +1,7 @@
+import { ExternalLink, Film, Play } from "lucide-react";
+const resources=[
+ {title:"ECP video library",description:"Browse the Election Commission's published videos and awareness material.",href:"https://ecp.gov.pk/videos"},
+ {title:"ECP official website",description:"Find voter services, information and the latest election notices.",href:"https://ecp.gov.pk/"},
+ {title:"Voter secrecy awareness",description:"Read ECP's awareness video page about the secrecy of voting.",href:"https://ecp.gov.pk/video-10-interference-with-secrecy-of-voting-awareness-video-on-chapter-x-of-the-elections-act"},
+];
+export default function Videos(){return <main id="main-content" className="shell content-wrap"><div className="page-heading"><span className="eyebrow">WATCH & LEARN</span><h1>ECP awareness videos</h1><p>Watch official material on voting and the electoral process. These links open ECP&apos;s website.</p></div><div className="info-banner"><Film size={28}/><div><strong>Videos hosted by ECP</strong><p>Choose a resource below to view its current content on the official website.</p></div></div><div className="resource-grid">{resources.map((x,i)=><a key={x.href} className="resource-card" href={x.href} target="_blank" rel="noopener noreferrer"><span className="eyebrow">{i===0?"VIDEO LIBRARY":"OFFICIAL ECP RESOURCE"}</span><h2>{x.title}</h2><p>{x.description}</p><span style={{display:"inline-flex",alignItems:"center",gap:8,color:"#086748",fontWeight:700,fontSize:14}}>{i===0?<Play size={16}/>:<ExternalLink size={16}/>} Open resource</span></a>)}</div></main>}
