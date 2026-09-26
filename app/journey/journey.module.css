@@ -1,5 +1,5 @@
 .page {
-  width: min(1280px, calc(100% - 80px));
+  width: min(1280px, calc(100% - 160px));
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 86px;
@@ -112,14 +112,15 @@
 .desktopNotice { position: absolute; top: calc(100% + 24px); color: var(--ecp-green); font-size: 14px; line-height: 22px; }
 .srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
-@media (min-width: 701px) and (max-width: 1150px) {
+@media (min-width: 769px) and (max-width: 1199px) {
+  .page { width: calc(100% - 64px); }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .introduction { height: auto; min-height: 78px; }
   .introduction p { max-width: 540px; }
 }
 
-@media (max-width: 700px) {
-  .page { width: calc(100% - 32px); padding-top: 20px; padding-bottom: 37px; }
+@media (max-width: 768px) {
+  .page { width: calc(100% - 32px); max-width: 520px; padding-top: 20px; padding-bottom: 37px; }
   .desktop { display: none; }
   .mobile { display: block; }
   .mobileHero { position: relative; height: 267px; border-radius: 22px; background: #e7f4ee; }

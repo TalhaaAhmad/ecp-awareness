@@ -2,7 +2,7 @@
 .hero { min-height: 424px; border-radius: 26px; background: var(--mint); padding: 28px 38px 26px 40px; display: grid; grid-template-columns: minmax(0, 1fr) 45.76%; gap: 24px; align-items: start; }
 .heroCopy { padding-top: 4px; }
 .eyebrow { width: 319px; max-width: 100%; min-height: 28px; border-radius: 20px; display: flex; align-items: center; justify-content: center; background: #d2eedc; font-size: 11px; font-weight: 700; color: var(--ecp-green); margin: 0 0 27px; }
-.hero h1 { font-size: 58px; line-height: 64px; font-weight: 700; color: var(--forest); margin: 0 0 18px; letter-spacing: -.6px; }
+.hero h1 { font-size: 58px; line-height: 64px; font-weight: 700; color: var(--forest); margin: 0 0 18px; }
 .description { font-size: 17px; line-height: 26px; color: var(--muted); margin: 0; }
 .actions { display: flex; gap: 14px; margin-top: 24px; }
 .primary, .outline { height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 5px; font-size: 15px; font-weight: 700; border-radius: 12px; transition: background .18s, box-shadow .18s; }
@@ -59,7 +59,7 @@
   .hero { min-height: 574px; border-radius: 22px; padding: 24px 24px 16px; display: flex; flex-direction: column; gap: 15px; }
   .heroCopy { padding: 0; width: 100%; }
   .eyebrow { display: block; background: none; border-radius: 0; font-size: 10px; line-height: 16px; margin-bottom: 22px; min-height: 32px; }
-  .hero h1 { font-size: 42px; line-height: 48px; letter-spacing: -.35px; margin: 0 0 18px; }
+  .hero h1 { font-size: 42px; line-height: 48px; margin: 0 0 18px; }
   .description { font-size: 15px; line-height: 23px; min-height: 46px; }
   .actions { flex-direction: column; gap: 10px; margin-top: 23px; }
   .primary, .outline { width: 100%; height: 48px; }

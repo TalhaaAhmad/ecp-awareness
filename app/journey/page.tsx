@@ -91,7 +91,7 @@ export default function JourneyPage() {
   function scrollToStage(index: number, mobile: boolean) {
     requestAnimationFrame(() => {
       const target = mobile ? mobileCard.current : desktopCards.current[index];
-      target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'center' });
       target?.focus({ preventScroll: true });
     });
   }

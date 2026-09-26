@@ -10,7 +10,7 @@ export function PortalFooter() {
         <div className="footer-content">
           <h2 className="footer-heading">Your vote matters.</h2>
           <p className="footer-subtext">
-            Be informed. Be empowered. Make your vote count.
+            <span>Be informed. Be empowered.</span>{" "}<span>Make your vote count.</span>
           </p>
           <span className="footer-label">VOTER EDUCATION</span>
         </div>

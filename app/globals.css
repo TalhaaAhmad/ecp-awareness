@@ -140,7 +140,8 @@ button:disabled { cursor: not-allowed; }
 }
 @media (max-width: 768px) {
   .header-inner { width: auto; height: 83px; margin: 0 16px 0 20px; }
-  .header-brand { gap: 12px; }
+  .header-brand { gap: 12px; align-items: flex-start; transform: translateY(-1.5px); }
+  .header-brand-text { padding-top: 6px; }
   .header-brand .header-seal { width: 56px; height: 56px; }
   .header-brand-text strong { font-size: 13px; line-height: 18px; }
   .header-brand-text span, .header-nav, .header-cta { display: none; }
@@ -154,6 +155,7 @@ button:disabled { cursor: not-allowed; }
   .footer-inner { width: auto; margin: 0 24px; padding: 32px 0 20px; }
   .footer-heading { font-size: 25px; line-height: 34px; margin-bottom: 12px; }
   .footer-subtext { font-size: 14px; line-height: 22px; max-width: 270px; margin-bottom: 15px; }
+  .footer-subtext span { display: block; }
   .footer-label { font-size: 10px; line-height: 14px; }
   .footer-right { display: none; }
 }

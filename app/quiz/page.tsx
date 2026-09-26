@@ -73,7 +73,7 @@ export default function QuizPage() {
       const question = questionElements.current[index];
       const target = focusAnswer ? question?.querySelector<HTMLInputElement>('input') : question?.querySelector<HTMLHeadingElement>('h2');
       target?.focus({ preventScroll: true });
-      question?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      question?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'nearest' });
     });
   }
 

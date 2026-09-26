@@ -1,6 +1,6 @@
 # Run Voter Awareness locally
 
-This export includes all five pages, the reference artwork, quiz and voting game, and the navigation fix.
+This project includes the responsive home page, quiz, voting journey, knowledge guide, video resources, and maze. The three primary pages match the supplied design-pack previews using their original graphics and locally bundled typography.
 
 ## Requirements
 
@@ -37,7 +37,12 @@ pnpm start:next
 - `app/quiz/page.tsx`: quiz questions and scoring
 - `app/journey/page.tsx`: voting game
 - `app/videos/page.tsx`: video links
-- `app/globals.css`: page styling and responsive layouts
+- `app/home.module.css`: home-page desktop and mobile layouts
+- `app/quiz/quiz.module.css`: quiz desktop and mobile layouts
+- `app/journey/journey.module.css`: voting-journey desktop and mobile layouts
+- `app/globals.css`: shared colors, header, footer, and secondary-page styles
+- `public/design/`: unchanged design-pack artwork
+- `public/fonts/`: bundled preview fonts and their license
 - `public/reference/`: supplied reference illustrations
 - `components/awareness/`: shared artwork and navigation components
 
