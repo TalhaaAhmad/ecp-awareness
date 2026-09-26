@@ -119,6 +119,10 @@
   .introduction p { max-width: 540px; }
 }
 
+@media (min-width: 1200px) and (max-width: 1359px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 @media (max-width: 768px) {
   .page { width: calc(100% - 32px); max-width: 520px; padding-top: 20px; padding-bottom: 37px; }
   .desktop { display: none; }
@@ -132,12 +136,12 @@
   .progress p { color: var(--ink); font-size: 14px; line-height: 20px; font-weight: 600; }
   .progressTrack { margin-top: 17px; height: 8px; overflow: hidden; border-radius: 4px; background: #dfeae4; }
   .progressTrack span { display: block; height: 100%; border-radius: inherit; background: var(--ecp-green); transition: width 200ms ease; }
-  .activeCard { position: relative; height: 536px; margin-top: 24px; border: 1px solid var(--line); border-radius: 20px; background: #fff; outline-offset: 4px; scroll-margin: 20px; }
+  .activeCard { position: relative; min-height: 536px; padding: 267px 19px 20px; margin-top: 24px; border: 1px solid var(--line); border-radius: 20px; background: #fff; outline-offset: 4px; scroll-margin: 20px; }
   .activeArtwork { position: absolute; left: 11px; top: 11px; width: calc(100% - 22px); height: 235px; border-radius: 14px; }
   .stepTag { position: absolute; left: 25px; top: 26px; display: grid; place-items: center; width: 80px; height: 28px; border-radius: 14px; color: white; background: var(--step-color); font-size: 11px; line-height: 16px; font-weight: 600; }
-  .activeCard h2 { position: absolute; top: 267px; left: 19px; right: 19px; color: var(--forest); font-size: 26px; line-height: 34px; font-weight: 700; }
-  .activeQuestion { position: absolute; top: 315px; left: 19px; right: 19px; color: var(--muted); font-size: 15px; line-height: 23px; white-space: pre-line; }
-  .mobileOptions { position: absolute; top: 379px; left: 17px; right: 17px; display: grid; gap: 6px; }
+  .activeCard h2 { color: var(--forest); font-size: 26px; line-height: 34px; font-weight: 700; }
+  .activeCard .activeQuestion { margin-top: 14px; color: var(--muted); font-size: 15px; line-height: 23px; white-space: pre-line; }
+  .mobileOptions { margin: 18px -2px 0; display: grid; gap: 6px; }
   .mobileOptions .option { min-height: 41px; border: 1px solid #d1dfdc; border-radius: 12px; padding: 6px 12px 6px 15px; background: #fff; font-size: 14px; line-height: 20px; }
   .mobileOptions .selected { border-color: var(--ecp-green); background: #e3f3ea; }
   .mobileOptions .wrong { border-color: #b83e47; background: #fff0ed; }
@@ -145,7 +149,7 @@
   .radio { display: block; width: 20px; height: 20px; flex-shrink: 0; margin-right: 13px; border: 1px solid #738b82; border-radius: 50%; background: #fff; }
   .selected .radio { border-color: var(--ecp-green); box-shadow: inset 0 0 0 4px white; background: var(--ecp-green); }
   .wrong .radio { border-color: #b83e47; background: #b83e47; }
-  .mobileSummary { position: absolute; top: 379px; left: 19px; right: 19px; padding: 15px; border-radius: 12px; color: var(--step-color); background: var(--step-tint); font-size: 15px; line-height: 22px; }
+  .mobileSummary { margin-top: 18px; padding: 15px; border-radius: 12px; color: var(--step-color); background: var(--step-tint); font-size: 15px; line-height: 22px; }
   .mobileSummary p { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 18px; }
   .mobileActions { margin: 24px 8px 0; }
   .mobileActions .primaryButton { width: 100%; }
@@ -164,9 +168,10 @@
 
 @media (max-width: 360px) {
   .activeCard h2 { font-size: 23px; }
-  .activeQuestion { font-size: 13px; }
+  .activeCard .activeQuestion { font-size: 13px; }
   .mobileOptions .option { font-size: 12px; }
-  .mapTitle { font-size: 12px; }
+  .mapTitle { font-size: 12px; line-height: 16px; }
+  .mapStatus { top: 48px; font-size: 11px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

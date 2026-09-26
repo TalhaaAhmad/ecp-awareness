@@ -4,6 +4,8 @@ Responsive voter education website implemented from the desktop and mobile previ
 
 Run locally with `pnpm dev:next`, then open http://localhost:3000. Create a production build with `pnpm build:next` and serve it with `pnpm start:next`. See [LOCAL_SETUP.md](LOCAL_SETUP.md) for setup instructions.
 
+For Vercel, `vercel.json` selects Next.js and runs `npm run build:next`. Keep the Output Directory override disabled. See [Vercel deployment setup](LOCAL_SETUP.md#deploy-to-vercel).
+
 The quiz includes answer validation, scoring, explanations, and retakes. The journey includes answer feedback, mobile stage navigation, completion, and replay. Both start with empty answers. General Knowledge, awareness-video links, and the existing maze are also available.
 
 Page styles live beside their pages in `app/*.module.css`, `app/quiz/`, and `app/journey/`. Shared navigation and original-artwork clipping are in `components/awareness/`; unchanged source JPEGs are in `public/design/`, and fonts and their license are in `public/fonts/`.

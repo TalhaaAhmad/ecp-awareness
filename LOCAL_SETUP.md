@@ -30,6 +30,21 @@ pnpm build:next
 pnpm start:next
 ```
 
+## Deploy to Vercel
+
+The repository's `vercel.json` selects the **Next.js** preset and runs `npm run build:next` (`next build --webpack`). This generates `.next/routes-manifest.json`, which Vercel's Next.js integration requires. The default `build` script runs Vinext for the Cloudflare/Sites runtime and should not be used on Vercel.
+
+In Vercel's project settings:
+
+- Set **Root Directory** to the folder containing `package.json` and `vercel.json` (the repository root for this checkout).
+- Use **Next.js** as the framework preset.
+- Leave the **Output Directory override disabled** so Vercel uses Next.js's default `.next` directory.
+- Keep automatic dependency installation; the existing pnpm lockfile and package-manager declaration control installation. Using npm to run the build script does not change the package manager used to install dependencies.
+
+Commit and push `vercel.json`, then deploy that updated commit. Redeploying an older commit will still use its old build configuration. Successful build logs should identify **Next.js** and show the route table; a log ending with `vinext start` is still using the wrong command.
+
+Reference: [Vercel's missing routes manifest guidance](https://github.com/vercel/vercel/blob/main/errors/now-next-routes-manifest.md).
+
 ## Where to edit
 
 - `app/page.tsx`: landing page and resource buttons
